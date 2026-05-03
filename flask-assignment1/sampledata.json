@@ -1,0 +1,8 @@
+{"name": "John Doe", "age": 30, "city": "New York",
+ "hobbies": ["reading", "traveling", "cooking"],
+ "education": {"degree": "Bachelor of Science", "major": "Computer Science", "university": "XYZ University"},
+ "work_experience": [{"company": "ABC Corp", "position": "Software Engineer", "duration": "2 years"},
+                     {"company": "DEF Inc", "position": "Senior Software Engineer", "duration": "3 years"}],
+ "skills": ["Python", "Flask", "JavaScript", "SQL"],
+ "languages": ["English", "Spanish"],
+ "contact": {"email": "johndoe@example.com"}}
