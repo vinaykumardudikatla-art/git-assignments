@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask App</title>
+</head>
+<body>
+
+    <div class="center-div">
+    <h1>Welcome to the Flask App!</h1>
+    <h2> Registration Page</h2>
+    <form action="/register" method="post">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br><br><br>
+        <input type="submit" value="Register">
+    </form>
+    </div>
+
+
+</body>
+<div class='bottom-div'>
+<footer>
+    <p> Current date: {{ current_date }}</p>
+    <p>&copy; 2026 Flask App. All rights reserved.</p>
+</footer>
+</div>
+</html>
+
+<style>
+    body {
+        align-items: center;
+        font-family: Arial, sans-serif;
+        margin: 20px;
+    }
+    h1 {
+        align-items: center;
+        color: #333;
+    }
+    form {
+        align-items: center;
+        margin-top: 20px;
+    }
+    label {
+        align-items: center;
+        display: inline-block;
+        width: 100px;
+    }
+    input[type="text"], input[type="password"] {
+        padding: 5px;
+        width: 200px;
+    }
+    input[type="submit"] {
+        
+        padding: 10px 15px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        cursor: pointer;
+        width: 100px;
+        left: 50%;
+        transform: translateX(100%);
+    }
+    input[type="submit"]:hover {
+        background-color: #45a049;
+    }
+    footer {
+        align-items: bottom;
+        margin-top: 40px;
+        text-align: center;
+        color: #777;
+    }
+    .bottom-div {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+    }
+    .center-div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+</style>
