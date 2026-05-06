@@ -4,5 +4,6 @@
  "work_experience": [{"company": "ABC Corp", "position": "Software Engineer", "duration": "2 years"},
                      {"company": "DEF Inc", "position": "Senior Software Engineer", "duration": "3 years"}],
  "skills": ["Python", "Flask", "JavaScript", "MySQL"],
+ "skills": ["Python", "Flask", "JavaScript", "NoSQL"],
  "languages": ["English", "Spanish"],
  "contact": {"email": "johndoe2@example.com"}}
