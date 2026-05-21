@@ -27,6 +27,17 @@ def register():
           return 'User already exists.'
     else:
           return 'Data submitted successfully!'
+    
+@app.route('/getdata')
+def get_data():
+    response = requests.get(f"{BACKEND_URL}/getdata")
+    if response.status_code == 200:
+        data = response.json()
+        print("Data received from backend:", data)
+        return render_template('data.html', data=data)
+    else:
+        print("Failed to fetch data from backend. Status code:", response.status_code)
+        return 'Failed to fetch data from backend.'
 
 
 if __name__ == '__main__':

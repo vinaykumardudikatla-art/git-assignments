@@ -29,6 +29,16 @@ collection = client['test']['test_collection']
 
 app = Flask(__name__)
 
+@app.route('/getdata')
+def get_data():
+    # convert the data to a list and exclude the '_id' field from the results
+    data = list(collection.find({}, {'_id': 0}))
+    for item in data:
+        registration_date = item.get('registration_date')
+        if isinstance(registration_date, datetime.datetime):
+            item['registration_date'] = registration_date.strftime("%Y-%m-%d %H:%M:%S")
+    print("Data fetched successfully from MongoDB.")
+    return json.dumps(data), 200
 
 @app.route('/register', methods=['POST'])
 def register():
@@ -49,7 +59,7 @@ def register():
         collection.insert_one({
             "name": name,
             "password": password,
-            "registration_date": current_date
+            "registration_date": datetime.datetime.now()
         })
 
         print(f"Submitted form data into database: {name}, {password}")
